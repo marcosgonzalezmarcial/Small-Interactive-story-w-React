@@ -1,15 +1,17 @@
+#root {
+  margin: 0;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  /* overflow-x: hidden; */
+  font-family: 'Lato', sans-serif;
+  background-image: url(./assets/LandPageBackground.jpg);
 }
 
-#root {
-  margin: 0;
-}
+
 
 .flex-container {
   margin: 10px;

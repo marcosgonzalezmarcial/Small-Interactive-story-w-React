@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import Textos from "./Textos.json";
-import Escena from "./components/Escena/Escena";
+import React from "react";
 import styled from "styled-components";
 
 const MyContainer = styled.div`
@@ -27,6 +25,7 @@ const MyMain = styled.div`
   grid-area: Main;
   height: 70vh;
 `;
+
 
 const MyHeaderContainer = styled.div`
   grid-area: "Header";
@@ -57,15 +56,16 @@ const MyTextArea = styled.h3`
   text-align: center;
   font-size: 2rem;
   margin: 0 25%;
-  line-height: 50px;
+  line-height : 50px;
   letter-spacing: 3px;
   text-shadow: 0.5px 0.5px #800000;
   color: #4ef04e;
 `;
 
+
 const MyButton = styled.button`
   background-color: #34c2a3;
-  border: 2px solid #518651;
+  border:2px solid #518651;
   color: #2c352c;
   padding: 2rem 3rem;
   text-align: center;
@@ -76,10 +76,6 @@ const MyButton = styled.button`
   margin-bottom: 12rem;
   border-radius: 50%;
   box-shadow: 3px 3px 3px 3px black;
-  cursor: pointer;
-  :hover {
-    background-color: #50c234;
-  }
 `;
 
 const ConfirmButtonArea = styled.div`
@@ -90,33 +86,21 @@ const ConfirmButtonArea = styled.div`
   text-align: center;
 `;
 
-function App() {
-  const [session, setSession] = useState(false);
 
-  if (session) {
-    return (
-      <>
-        <Escena texto={Textos} />
-      </>
-    );
-  } else
-    return (
-      <MyContainer className="container">
-        <MyHeaderContainer className="Header">
-          <MyHeader>Historia interactiva</MyHeader>
-        </MyHeaderContainer>
-        <MyMain>
-          <MyTextArea className="text-area">
-            Este es el prototipo de una aplicación tipo tutorial para una
-            empresa. Te invitamos a conocer su funcionalidad clickando el
-            siguiente botón:
-          </MyTextArea>
-          <ConfirmButtonArea className="confirm-button">
-            <MyButton onClick={() => setSession(true)}>¿Te animás?</MyButton>
-          </ConfirmButtonArea>
-        </MyMain>
-      </MyContainer>
-    );
+
+export default function LandingPage(props) {
+
+
+  return (
+    <MyContainer className="container">
+      <MyHeaderContainer className="Header">
+        <MyHeader>Historia interactiva</MyHeader>
+      </MyHeaderContainer>
+      <MyMain >
+        <MyTextArea className="text-area">Este es el prototipo de una aplicación tipo tutorial para una empresa. Te invitamos a conocer su funcionalidad clickando el siguiente botón: </MyTextArea>
+        <ConfirmButtonArea className="confirm-button"><MyButton>¿Te animás?</MyButton></ConfirmButtonArea>
+        
+      </MyMain>
+    </MyContainer>
+  );
 }
-
-export default App;
