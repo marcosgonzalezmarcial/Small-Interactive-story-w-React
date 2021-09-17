@@ -27,22 +27,6 @@ body {
   align-self: stretch;
 }
 
-.p-escena {
-  padding: 0.9rem;
-  border: 2px solid black;
-  border-radius: 25px;
-  margin: 15px 30px;
-  text-align: center;
-}
-
-.enable {
-  background-color: pink;
-}
-
-.disabled {
-  background-color: white;
-}
-
 .buttons {
   margin-top: 5px;
   margin-bottom: 25px;
@@ -52,19 +36,4 @@ body {
   justify-content: center;
   align-content: stretch;
   align-items: flex-start;
-}
-
-.leftButton {
-  order: 0;
-  flex: 1 1 auto;
-  align-self: stretch;
-  padding: 1.3rem;
-  font-size: 25px;
-}
-.rightButton {
-  order: 0;
-  flex: 1 1 auto;
-  align-self: stretch;
-  padding: 1.3rem;
-  font-size: 25px;
 }
