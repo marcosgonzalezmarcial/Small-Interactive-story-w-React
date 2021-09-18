@@ -7,6 +7,7 @@ const MyButton = styled.button`
   align-self: stretch;
   padding: 1.3rem;
   font-size: 25px;
+  margin-right: 5px;
 `;
 
 export default function RightButton(props) {

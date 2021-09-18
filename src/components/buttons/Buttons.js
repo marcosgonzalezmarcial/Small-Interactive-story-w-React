@@ -21,12 +21,3 @@ export default function Buttons() {
     </MyButtons>
   );
 }
-
-// .flex-container {
-//     display: flex;
-//     flex-direction: row;
-//     flex-wrap: nowrap;
-//     justify-content: center;
-//     align-content: stretch;
-//     align-items: flex-start;
-//     }
