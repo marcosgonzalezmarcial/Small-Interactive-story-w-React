@@ -1,44 +1,15 @@
 import React, { useState } from "react";
-import Textos from "./Textos.json";
-import styled from "styled-components";
+import Escena from "./components/Escena/Escena";
+import LandPage from "./components/LandPage/LandPage";
+import ImagenesTextos from "./ImagenesTextos";
 
 function App() {
-  function Escena(props) {
-    const [texto, setTexto] = useState(props.texto);
-    const [contador, setContador] = useState(0);
+  const [session, setSession] = useState(false);
+  const setStateSession = () => setSession(true);
 
-    const sumar = () => {
-      if (contador >= 3) {
-        setContador(0);
-      } else {
-        setContador(contador + 1);
-      }
-    };
-
-    return (
-      <div className="flex-container">
-        <section className="section-flex-item">
-          <div className="buttons">
-            <button className="leftButton">Anterior</button>
-            <button onClick={sumar} className="rightButton">
-              Siguiente
-            </button>
-          </div>
-          {texto.map((text, index) => (
-            <p
-              className={`p-escena ${
-                index === contador ? "enable" : "disabled"
-              }`}
-            >
-              {text}
-            </p>
-          ))}
-        </section>
-      </div>
-    );
-  }
-
-  return <Escena texto={Textos} />;
+  if (session) {
+    return <Escena ImagenesTextos={ImagenesTextos} />;
+  } else return <LandPage setSession={setStateSession} />;
 }
 
 export default App;
